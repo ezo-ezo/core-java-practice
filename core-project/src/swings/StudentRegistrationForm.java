@@ -8,7 +8,7 @@ import java.util.regex.*;
 public class StudentRegistrationForm extends JFrame {
     // Form components
     private JTextField nameField, emailField, ageField;
-    private JRadioButton maleRadio, femaleRadio;
+    private JRadioButton maleRadio, femaleRadio, otherRadio;
     private JComboBox<String> courseCombo;
     private JCheckBox programmingCheck, sportsCheck, musicCheck;
     private ButtonGroup genderGroup;
@@ -29,9 +29,11 @@ public class StudentRegistrationForm extends JFrame {
         // Radio buttons for gender
         maleRadio = new JRadioButton("Male");
         femaleRadio = new JRadioButton("Female");
+        otherRadio = new JRadioButton("Other");
         genderGroup = new ButtonGroup();
         genderGroup.add(maleRadio);
         genderGroup.add(femaleRadio);
+        genderGroup.add(otherRadio);
 
         // Combo box for course
         String[] courses = { "Computer Science", "Engineering",
@@ -87,6 +89,7 @@ public class StudentRegistrationForm extends JFrame {
         JPanel genderPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         genderPanel.add(maleRadio);
         genderPanel.add(femaleRadio);
+        genderPanel.add(otherRadio);
         add(genderPanel, gbc);
 
         // Course combo box
