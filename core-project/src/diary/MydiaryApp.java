@@ -13,7 +13,7 @@ public class MydiaryApp {
         int choice;
 
         do {
-            System.out.println("\n=== My Diary App ===");
+            System.out.println("\n----------My Diary App----------");
             System.out.println("1. Write Note");
             System.out.println("2. Read Note by Date");
             System.out.println("3. Exit");
@@ -30,18 +30,13 @@ public class MydiaryApp {
                     String content = scanner.nextLine();
                     String date = Date.valueOf(java.time.LocalDate.now()).toString();
 
-
                     Note note = new Note(title, content, date);
-                    if (diaryService.addNote(note)) {
-                        System.out.println("Note added successfully.");
-                    } else {
-                        System.out.println("Failed to add note.");
-                    }
+                    
                     break;
 
                 case 2:
-                    System.out.print("Enter date of note to read (e.g., 04-07-2025): ");
-                    String searchDate = sc.nextLine();
+                    System.out.print("Enter date of the note to read: ");
+                    
                     break;
 
                 case 3:

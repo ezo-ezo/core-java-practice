@@ -4,7 +4,7 @@ import diary.dal.DiaryFileHandler;
 import diary.model.Note;
 
 public class DiaryService {
-    DiaryFileHandler fileHandler = new DiaryFileHandler();
+    private DiaryFileHandler fileHandler = new DiaryFileHandler();
 
     public boolean addNote(Note note) {
         // Logic to add a note
