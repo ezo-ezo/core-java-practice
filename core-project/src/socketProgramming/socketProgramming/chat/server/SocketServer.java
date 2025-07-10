@@ -1,4 +1,4 @@
-        qpackage socketProgramming.chat.server;
+package socketProgramming.chat.server;
 
 import java.io.*;
 import java.net.*;
@@ -15,7 +15,7 @@ public class SocketServer {
 
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
+ 
             String inputLine;
             inputLine = in.readLine();
             System.out.println("Received: " + inputLine);

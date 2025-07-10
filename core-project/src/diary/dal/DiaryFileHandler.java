@@ -34,5 +34,6 @@ public class DiaryFileHandler {
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Error reading note: " + e.getMessage());
         }
+     return null;
     }
 }
